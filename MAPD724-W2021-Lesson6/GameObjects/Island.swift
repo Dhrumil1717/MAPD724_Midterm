@@ -11,7 +11,8 @@ class Island: GameObject
         Start()
     }
     
-    required init?(coder aDecoder: NSCoder) {
+    required init?(coder aDecoder: NSCoder)
+    {
         fatalError("init(coder:) has not been implemented")
     }
     
@@ -19,7 +20,7 @@ class Island: GameObject
     
     override func CheckBounds()
     {
-        if(position.y <= -730)
+        if(position.x <= -730) //MARK:- MIDTERM EDIT Changed the y-axis to x-axis
         {
             Reset()
         }
@@ -27,10 +28,10 @@ class Island: GameObject
     
     override func Reset()
     {
-        position.y = 730
+        position.x = 730   //MARK:- MIDTERM EDIT Changed the y position to x position
         // get a pseudo-random number from -313 to 313 =
         let randomX:Int = (randomSource?.nextInt(upperBound: 626))! - 313
-        position.x = CGFloat(randomX)
+        position.y = CGFloat(randomX)
         isColliding = false
     }
     
@@ -39,7 +40,7 @@ class Island: GameObject
     {
         zPosition = 1
         Reset()
-        dy = 5.0
+        dx = 5.0  //MARK:- MIDTERM EDIT Changed the speed so that it moves with 5x speed in x axis
     }
     
     override func Update()
@@ -50,6 +51,6 @@ class Island: GameObject
     
     func Move()
     {
-        position.y -= dy!
+        position.x -= dx!  //MARK:- MIDTERM EDIT Moves the island on x axis
     }
 }
