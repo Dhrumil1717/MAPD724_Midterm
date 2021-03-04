@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BV1-FR-VrT">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -22,13 +22,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lives: 99" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4iN-R4-EcP">
-                                <rect key="frame" x="20" y="63" width="79.5" height="21"/>
+                                <rect key="frame" x="20" y="63" width="79.666666666666671" height="21"/>
                                 <fontDescription key="fontDescription" name="Dock51" family="Dock 51" pointSize="20"/>
                                 <color key="textColor" systemColor="systemYellowColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score: 99999" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fxC-Wv-92p">
-                                <rect key="frame" x="270" y="63" width="123.5" height="21"/>
+                                <rect key="frame" x="270" y="63" width="123.66666666666669" height="21"/>
                                 <fontDescription key="fontDescription" name="Dock51" family="Dock 51" pointSize="20"/>
                                 <color key="textColor" systemColor="systemYellowColor"/>
                                 <nil key="highlightedColor"/>
@@ -37,11 +37,35 @@
                         <viewLayoutGuide key="safeArea" id="4qk-I5-YsI"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="fxC-Wv-92p" firstAttribute="leading" secondItem="4iN-R4-EcP" secondAttribute="trailing" constant="71.5" id="9p2-rv-Ggr"/>
                             <constraint firstItem="4iN-R4-EcP" firstAttribute="leading" secondItem="3se-qz-xqx" secondAttribute="leadingMargin" id="Dsk-dt-Qmo"/>
                             <constraint firstItem="4qk-I5-YsI" firstAttribute="trailing" secondItem="fxC-Wv-92p" secondAttribute="trailing" constant="20.5" id="K03-Ex-7gi"/>
+                            <constraint firstItem="fxC-Wv-92p" firstAttribute="baseline" secondItem="4iN-R4-EcP" secondAttribute="baseline" id="Qx1-s2-Gl1"/>
+                            <constraint firstItem="4qk-I5-YsI" firstAttribute="trailing" secondItem="fxC-Wv-92p" secondAttribute="trailing" constant="242.5" id="V85-tL-6Zx"/>
                             <constraint firstItem="4iN-R4-EcP" firstAttribute="top" secondItem="4qk-I5-YsI" secondAttribute="top" constant="19" id="YBl-PF-Xh4"/>
                             <constraint firstItem="4iN-R4-EcP" firstAttribute="baseline" secondItem="fxC-Wv-92p" secondAttribute="baseline" id="j61-kT-4e8"/>
+                            <constraint firstItem="fxC-Wv-92p" firstAttribute="top" secondItem="4qk-I5-YsI" secondAttribute="top" constant="20" id="ls1-Wu-ls9"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="V85-tL-6Zx"/>
+                                <exclude reference="9p2-rv-Ggr"/>
+                                <exclude reference="Qx1-s2-Gl1"/>
+                                <exclude reference="ls1-Wu-ls9"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact-widthClass=regular">
+                            <mask key="constraints">
+                                <exclude reference="K03-Ex-7gi"/>
+                                <include reference="V85-tL-6Zx"/>
+                                <exclude reference="Dsk-dt-Qmo"/>
+                                <exclude reference="YBl-PF-Xh4"/>
+                                <exclude reference="j61-kT-4e8"/>
+                                <include reference="9p2-rv-Ggr"/>
+                                <include reference="Qx1-s2-Gl1"/>
+                                <include reference="ls1-Wu-ls9"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="LivesLabel" destination="4iN-R4-EcP" id="zPz-M5-jdk"/>

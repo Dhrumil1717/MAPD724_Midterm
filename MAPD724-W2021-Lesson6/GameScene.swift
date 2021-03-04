@@ -34,7 +34,8 @@ class GameScene: SKScene
         
         // add plane to the scene
         plane = Plane()
-        plane?.position = CGPoint(x: 0, y: -495)
+        plane?.position = CGPoint(x:  -450, y:0)  //MARK:- MIDTERM EDIT Adjusted the position for the plane when it is loaded on the screen
+        
         addChild(plane!)
         
         // add 2 clouds to the scene
@@ -67,18 +68,18 @@ class GameScene: SKScene
     
     func touchDown(atPoint pos : CGPoint)
     {
-        plane?.TouchMove(newPos: CGPoint(x: pos.x, y: -495))
+        plane?.TouchMove(newPos: CGPoint(x: -450, y: pos.y))  //MARK:- MIDTERM EDIT Adjusted the position for the plane for touch down
     }
     
     func touchMoved(toPoint pos : CGPoint)
     {
-        plane?.TouchMove(newPos: CGPoint(x: pos.x, y: -495))
+        plane?.TouchMove(newPos: CGPoint(x: -450, y: pos.y))  //MARK:- MIDTERM EDIT  Adjusted the position of plane when it is moved
 
     }
     
     func touchUp(atPoint pos : CGPoint)
     {
-        plane?.TouchMove(newPos: CGPoint(x: pos.x, y: -495))
+        plane?.TouchMove(newPos: CGPoint(x: -450, y: pos.y))  //MARK:- MIDTERM EDIT  Adjusted the position for plane for touch up
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?)
