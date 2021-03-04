@@ -7,7 +7,7 @@ class Ocean: GameObject
     // constructor
     init()
     {
-        super.init(imageString: "ocean", initialScale: 2.0)
+        super.init(imageString: "ocean_landscape", initialScale: 2.0)
         Start()
     }
     
@@ -18,23 +18,25 @@ class Ocean: GameObject
     // LifeCycle Functions
     
     override func CheckBounds()
-    {
-        if(position.y <= -773)
+    {       //MARK:- MIDTERM EDIT change the x-axis position to
+        if(position.x <= -773)
         {
             Reset()
         }
     }
-    
+    //MARK:- MIDTERM EDIT change the reset position of the x-axis at 773 and y axis to 0
     override func Reset()
     {
-        position.y = 773
+        position.x = 773
     }
     
     // initialization
+    
+    //MARK:- MIDTERM EDIT change the movement speed of the ocean axis on the x axis
     override func Start()
     {
         zPosition = 0
-        dy = 5.0
+        dx = 5.0
     }
     
     override func Update()
@@ -42,9 +44,9 @@ class Ocean: GameObject
         Move()
         CheckBounds()
     }
-    
+    //MARK:- MIDTERM EDIT Move the ocean along x axis in landscape mode
     func Move()
     {
-        position.y -= dy!
+        position.x -= dx! //made change
     }
 }

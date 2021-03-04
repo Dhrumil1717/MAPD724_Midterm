@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BF2B46B525F06D0600961AB0 /* ocean_landscape.png in Resources */ = {isa = PBXBuildFile; fileRef = BF2B46B425F06D0600961AB0 /* ocean_landscape.png */; };
 		E9728E0F25F03E2D000FED64 /* ScoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9728E0E25F03E2D000FED64 /* ScoreManager.swift */; };
 		E9728E1225F0408A000FED64 /* engine.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E9728E1125F04089000FED64 /* engine.mp3 */; };
 		E9728E1525F04096000FED64 /* thunder.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E9728E1425F04096000FED64 /* thunder.mp3 */; };
@@ -83,6 +84,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BF2B46B425F06D0600961AB0 /* ocean_landscape.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ocean_landscape.png; sourceTree = "<group>"; };
 		E9728E0E25F03E2D000FED64 /* ScoreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreManager.swift; sourceTree = "<group>"; };
 		E9728E1125F04089000FED64 /* engine.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = engine.mp3; sourceTree = "<group>"; };
 		E9728E1425F04096000FED64 /* thunder.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = thunder.mp3; sourceTree = "<group>"; };
@@ -223,6 +225,7 @@
 		E9DACE3825E71F6300895099 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				BF2B46B425F06D0600961AB0 /* ocean_landscape.png */,
 				E9DACEA925E7206D00895099 /* ocean.png */,
 				E9DACE3925E71F6300895099 /* bullet.png */,
 				E9DACE3A25E71F6300895099 /* plane3.png */,
@@ -390,6 +393,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E9DACE9225E71F6300895099 /* explosion2.png in Resources */,
+				BF2B46B525F06D0600961AB0 /* ocean_landscape.png in Resources */,
 				E9DACE8825E71F6300895099 /* cloud.png in Resources */,
 				E9DACE2D25E71DDB00895099 /* Main.storyboard in Resources */,
 				E9DACE7E25E71F6300895099 /* coin09.png in Resources */,

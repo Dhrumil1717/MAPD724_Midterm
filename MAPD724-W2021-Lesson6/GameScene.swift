@@ -25,7 +25,7 @@ class GameScene: SKScene
         
         // add ocean to the scene
         ocean = Ocean() // allocate memory
-        ocean?.position = CGPoint(x: 0, y: 773)
+        ocean?.position = CGPoint(x: 773, y: 0)
         addChild(ocean!) // add object to the scene
         
         // add island to the scene
@@ -37,8 +37,8 @@ class GameScene: SKScene
         plane?.position = CGPoint(x: 0, y: -495)
         addChild(plane!)
         
-        // add 3 clouds to the scene
-        for index in 0...2
+        // add 2 clouds to the scene
+        for index in 0...1
         {
             let cloud: Cloud = Cloud()
             clouds.append(cloud)
@@ -115,7 +115,5 @@ class GameScene: SKScene
             cloud.Update()
             CollisionManager.SquaredRadiusCheck(scene: self, object1: plane!, object2: cloud)
         }
-        
-        
     }
 }
